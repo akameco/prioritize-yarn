@@ -1,6 +1,6 @@
 # prioritize-yarn [![Build Status](https://travis-ci.org/akameco/prioritize-yarn.svg?branch=master)](https://travis-ci.org/akameco/prioritize-yarn)
 
-> If yarn, change npm install to yarn.
+> If the project has yarn.lock, change npm install to yarn.
 
 ## CLI
 

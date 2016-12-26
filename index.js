@@ -2,8 +2,8 @@
 const execa = require('execa');
 const hasYarn = require('has-yarn');
 
-function isInstall(arg) {
-	return arg === 'i' || arg === 'install';
+function isInstall(input) {
+	return input === 'i' || input === 'install';
 }
 
 module.exports = (input, flags) => {

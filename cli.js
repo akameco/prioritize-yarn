@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require('meow');
+const updateNotifier = require('update-notifier');
 const prioritizeYarn = require('./');
 
 const cli = meow({
@@ -12,5 +13,7 @@ const cli = meow({
 		D: 'save-dev'
 	}
 });
+
+updateNotifier({pkg: cli.pkg}).notify();
 
 prioritizeYarn(cli.input, cli.flags);

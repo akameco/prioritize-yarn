@@ -1,0 +1,41 @@
+{
+  "name": "prioritize-yarn",
+  "version": "0.0.0",
+  "description": "If yarn, change npm install to yarn.",
+  "license": "MIT",
+  "repository": "akameco/prioritize-yarn",
+  "author": {
+    "name": "akameco",
+    "email": "akameco.t@gmail.com",
+    "url": "akameco.github.io"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "yarn",
+    "npm",
+    "install"
+  ],
+  "dependencies": {
+    "execa": "^0.5.0",
+    "has-yarn": "^1.0.0",
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "xo": "^0.17.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}

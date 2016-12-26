@@ -5,7 +5,8 @@ const updateNotifier = require('update-notifier');
 const prioritizeYarn = require('./');
 
 const cli = meow({
-	help: false
+	help: false,
+	version: false
 }, {
 	boolean: ['save', 'save-dev'],
 	alias: {

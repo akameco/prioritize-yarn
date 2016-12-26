@@ -14,6 +14,14 @@ $ npm install
 // Using yarn, when there is a `yarn.lock`.
 ```
 
+## Recommend
+
+Add this to ~/.bashrc or ~/.zshrc:
+
+```
+alias npm=prioritize-yarn
+```
+
 ## License
 
 MIT © [akameco](http://akameco.github.io)

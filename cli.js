@@ -8,10 +8,17 @@ const cli = meow({
 	help: false,
 	version: false
 }, {
-	boolean: ['save', 'save-dev'],
+	boolean: [
+		'save',
+		'save-dev',
+		'save-optional',
+		'save-exact'
+	],
 	alias: {
 		S: 'save',
-		D: 'save-dev'
+		D: 'save-dev',
+		O: 'save-optional',
+		E: 'save-exact'
 	}
 });
 

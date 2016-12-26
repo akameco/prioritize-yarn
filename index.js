@@ -23,8 +23,15 @@ module.exports = (input, flags) => {
 			args = ['add'].concat(input.slice(1));
 		} else if (flags.saveDev) {
 			args = ['add', '--dev'].concat(input.slice(1));
-		} else {
+		} else if (flags.saveOptional) {
+			args = ['add', '--optional'].concat(input.slice(1));
+		} else if (flags.saveExact) {
+			args = ['add', '--exact'].concat(input.slice(1));
+		} else if (Object.keys(flags).length === 0) {
 			args = [];
+		} else {
+			// for npm install --global and more...
+			task = 'npm';
 		}
 	}
 

@@ -16,9 +16,16 @@ module.exports = (input, flags) => {
 	let task = 'npm';
 	let args = input;
 
-	if (Object.keys(flags).length === 0 && input.length === 1 && isInstall(input[0]) && hasYarn()) {
+	if (isInstall(input[0]) && hasYarn()) {
 		task = 'yarn';
-		args = [];
+
+		if (flags.save) {
+			args = ['add'].concat(input.slice(1));
+		} else if (flags.saveDev) {
+			args = ['add', '--dev'].concat(input.slice(1));
+		} else {
+			args = [];
+		}
 	}
 
 	const opts = {

@@ -1,6 +1,6 @@
 {
   "name": "prioritize-yarn",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "If yarn, change npm install to yarn.",
   "license": "MIT",
   "repository": "akameco/prioritize-yarn",

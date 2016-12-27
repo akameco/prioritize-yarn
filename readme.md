@@ -10,8 +10,14 @@ $ npm install --global prioritize-yarn
 
 ```
 $ alias npm='prioritize-yarn'
-$ npm install
 // Using yarn, when there is a `yarn.lock`.
+$ npm install
+yarn install v0.18.1
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 📃  Building fresh packages...
+✨  Done in 2.25s.
 ```
 
 ## Recommend

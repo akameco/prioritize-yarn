@@ -6,6 +6,11 @@ function isInstall(input) {
 	return input === 'i' || input === 'install';
 }
 
+function hasNoFlags(flags) {
+	// meow sets all flags to false unless present, so we need to check all of them
+	return !Object.keys(flags).reduce((hasFlag, key) => hasFlag || flags[key], false);
+}
+
 module.exports = (input, flags) => {
 	if (!Array.isArray(input)) {
 		return Promise.reject(new TypeError(`Expected a Array, got ${typeof input}`));
@@ -15,10 +20,8 @@ module.exports = (input, flags) => {
 
 	let task = 'npm';
 	let args = input;
-
 	if (isInstall(input[0]) && hasYarn()) {
 		task = 'yarn';
-
 		if (flags.save) {
 			args = ['add'].concat(input.slice(1));
 		} else if (flags.saveDev) {
@@ -27,14 +30,13 @@ module.exports = (input, flags) => {
 			args = ['add', '--optional'].concat(input.slice(1));
 		} else if (flags.saveExact) {
 			args = ['add', '--exact'].concat(input.slice(1));
-		} else if (Object.keys(flags).length === 0) {
+		} else if (hasNoFlags(flags)) {
 			args = [];
 		} else {
 			// for npm install --global and more...
 			task = 'npm';
 		}
 	}
-
 	const opts = {
 		cwd: process.cwd(),
 		stdio: 'inherit'

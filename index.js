@@ -19,7 +19,7 @@ module.exports = (input, flags) => {
 	flags = flags || {};
 
 	let task = 'npm';
-	let args = input;
+	let args = process.argv.slice(2);
 	if (isInstall(input[0]) && hasYarn()) {
 		task = 'yarn';
 		if (flags.save) {

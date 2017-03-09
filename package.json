@@ -31,7 +31,7 @@
     "execa": "^0.6.0",
     "has-yarn": "^1.0.0",
     "meow": "^3.7.0",
-    "update-notifier": "^1.0.3"
+    "update-notifier": "^2.1.0"
   },
   "devDependencies": {
     "xo": "^0.17.0"

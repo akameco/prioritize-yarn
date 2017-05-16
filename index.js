@@ -7,7 +7,7 @@ function isInstall(input) {
 }
 
 function hasNoFlags(flags) {
-	// meow sets all flags to false unless present, so we need to check all of them
+	// Meow sets all flags to false unless present, so we need to check all of them
 	return !Object.keys(flags).reduce((hasFlag, key) => hasFlag || flags[key], false);
 }
 
@@ -33,7 +33,7 @@ module.exports = (input, flags) => {
 		} else if (hasNoFlags(flags)) {
 			args = [];
 		} else {
-			// for npm install --global and more...
+			// For npm install --global and more...
 			task = 'npm';
 		}
 	}

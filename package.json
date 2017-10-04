@@ -19,21 +19,12 @@
     "lint": "eslint .",
     "test": "npm run lint"
   },
-  "files": [
-    "index.js",
-    "cli.js"
-  ],
+  "files": ["index.js", "cli.js"],
   "lint-staged": {
     "*.js": ["fmt", "test", "git add"],
     "*.json": ["fmt", "git add"]
   },
-  "keywords": [
-    "cli-app",
-    "cli",
-    "yarn",
-    "npm",
-    "install"
-  ],
+  "keywords": ["cli-app", "cli", "yarn", "npm", "install"],
   "dependencies": {
     "execa": "^0.8.0",
     "has-yarn": "^1.0.0",
@@ -47,8 +38,5 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.2.3",
     "prettier": "^1.7.4"
-  },
-  "xo": {
-    "esnext": true
   }
 }

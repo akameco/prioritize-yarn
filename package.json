@@ -28,14 +28,12 @@
     "install"
   ],
   "dependencies": {
-    "execa": "^0.6.3",
+    "execa": "^0.8.0",
     "has-yarn": "^1.0.0",
     "meow": "^3.7.0",
-    "react": "^15.5.4",
-    "update-notifier": "^2.1.0"
+    "update-notifier": "^2.2.0"
   },
   "devDependencies": {
-    "react": "^15.5.4",
     "xo": "^0.18.2"
   },
   "xo": {

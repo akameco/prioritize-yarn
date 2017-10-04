@@ -14,12 +14,19 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo"
+    "precommit": "lint-staged",
+    "fmt": "prettier --write '*.{js,json}'",
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "files": [
     "index.js",
     "cli.js"
   ],
+  "lint-staged": {
+    "*.js": ["fmt", "test", "git add"],
+    "*.json": ["fmt", "git add"]
+  },
   "keywords": [
     "cli-app",
     "cli",
@@ -34,7 +41,12 @@
     "update-notifier": "^2.2.0"
   },
   "devDependencies": {
-    "xo": "^0.18.2"
+    "all-contributors-cli": "^4.5.0",
+    "eslint": "^4.8.0",
+    "eslint-config-precure": "^0.8.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.4"
   },
   "xo": {
     "esnext": true

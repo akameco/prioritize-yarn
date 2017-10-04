@@ -1,0 +1,31 @@
+{
+  "projectName": "prioritize-yarn",
+  "projectOwner": "akameco",
+  "files": [
+    "readme.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "akameco",
+      "name": "akameco",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4002137?v=4",
+      "profile": "http://akameco.github.io",
+      "contributions": [
+        "code",
+        "doc",
+        "infra"
+      ]
+    },
+    {
+      "login": "MiguelMadero",
+      "name": "Miguel Madero",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/47388?v=4",
+      "profile": "http://www.miguelmadero.com",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}

@@ -44,7 +44,7 @@ module.exports = (input, flags) => {
   }
   const opts = {
     cwd: process.cwd(),
-    stdio: 'inherit',
+    stdio: 'inherit'
   }
 
   return execa(task, args, opts).catch(() => {})

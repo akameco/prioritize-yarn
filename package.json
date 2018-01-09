@@ -19,12 +19,28 @@
     "lint": "eslint .",
     "test": "npm run lint"
   },
-  "files": ["index.js", "cli.js"],
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
   "lint-staged": {
-    "*.js": ["fmt", "test", "git add"],
-    "*.json": ["fmt", "git add"]
+    "*.js": [
+      "fmt",
+      "test",
+      "git add"
+    ],
+    "*.json": [
+      "fmt",
+      "git add"
+    ]
   },
-  "keywords": ["cli-app", "cli", "yarn", "npm", "install"],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "yarn",
+    "npm",
+    "install"
+  ],
   "dependencies": {
     "execa": "^0.8.0",
     "has-yarn": "^1.0.0",
@@ -32,9 +48,9 @@
     "update-notifier": "^2.3.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "^4.10.0",
-    "eslint": "^4.13.1",
-    "eslint-config-precure": "^0.11.3",
+    "all-contributors-cli": "^4.10.1",
+    "eslint": "^4.15.0",
+    "eslint-config-precure": "^0.13.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
     "prettier": "^1.9.2"

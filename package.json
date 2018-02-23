@@ -42,7 +42,7 @@
     "install"
   ],
   "dependencies": {
-    "execa": "^0.8.0",
+    "execa": "^0.9.0",
     "has-yarn": "^1.0.0",
     "meow": "^4.0.0",
     "update-notifier": "^2.3.0"
@@ -50,9 +50,9 @@
   "devDependencies": {
     "all-contributors-cli": "^4.10.1",
     "eslint": "^4.15.0",
-    "eslint-config-precure": "^0.13.0",
+    "eslint-config-precure": "^2.4.0",
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
+    "lint-staged": "^7.0.0",
     "prettier": "^1.9.2"
   }
 }

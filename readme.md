@@ -1,5 +1,7 @@
 # prioritize-yarn [![Build Status](https://travis-ci.org/akameco/prioritize-yarn.svg?branch=master)](https://travis-ci.org/akameco/prioritize-yarn) [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/prioritize-yarn.svg)](https://greenkeeper.io/)
+
 > If the project has yarn.lock, change npm install to yarn.
 
 ## CLI

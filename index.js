@@ -18,7 +18,7 @@ function hasNoFlags(flags) {
   )
 }
 
-function getFlag(input) {
+function getCmd(input) {
   if (isInstall(input)) {
     return 'add'
   } else if (isUninstall(input)) {
@@ -41,27 +41,28 @@ module.exports = (input, flags) => {
   }
 
   let task = 'npm'
-  let args = process.argv.slice(2)
+  const inputCmd = input[0]
+  let args = input
 
   if (!hasYarn()) {
-    return execa(task, args, opts)
+    return execa('npm', input, opts)
   }
 
-  if (isInstall(input[0]) || isUninstall(input[0])) {
+  if (isInstall(inputCmd) || isUninstall(inputCmd)) {
     task = 'yarn'
-    const flag = getFlag(input[0])
+    const cmd = getCmd(inputCmd)
     if (flags.save) {
-      args = [flag].concat(input.slice(1))
+      args = [cmd].concat(input.slice(1))
     } else if (flags.saveDev) {
-      args = [flag, '--dev'].concat(input.slice(1))
+      args = [cmd, '--dev'].concat(input.slice(1))
     } else if (flags.saveOptional) {
-      args = [flag, '--optional'].concat(input.slice(1))
+      args = [cmd, '--optional'].concat(input.slice(1))
     } else if (flags.saveExact) {
-      args = [flag, '--exact'].concat(input.slice(1))
-    } else if (isInstall(input[0]) && hasNoFlags(flags)) {
+      args = [cmd, '--exact'].concat(input.slice(1))
+    } else if (isInstall(inputCmd) && hasNoFlags(flags)) {
       args = []
-    } else if (isUninstall(input[0])) {
-      args = ['remove', process.argv.slice(3)]
+    } else if (isUninstall(inputCmd)) {
+      args = ['remove', input.slice(1)]
     } else {
       // For npm install --global and more...
       task = 'npm'

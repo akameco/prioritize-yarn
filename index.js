@@ -58,8 +58,10 @@ module.exports = (input, flags) => {
       args = [flag, '--optional'].concat(input.slice(1))
     } else if (flags.saveExact) {
       args = [flag, '--exact'].concat(input.slice(1))
-    } else if (hasNoFlags(flags)) {
+    } else if (isInstall(input[0]) && hasNoFlags(flags)) {
       args = []
+    } else if (isUninstall(input[0])) {
+      args = ['remove', process.argv.slice(3)]
     } else {
       // For npm install --global and more...
       task = 'npm'

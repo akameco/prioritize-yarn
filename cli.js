@@ -2,7 +2,7 @@
 'use strict'
 const meow = require('meow')
 const updateNotifier = require('update-notifier')
-const prioritizeYarn = require('./')
+const prioritizeYarn = require('.')
 
 const cli = meow({
   help: false,

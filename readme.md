@@ -33,11 +33,8 @@ alias npm=prioritize-yarn
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/4002137?v=4" width="100px;"/><br /><sub><b>akameco</b></sub>](http://akameco.github.io)<br />[💻](https://github.com/akameco/prioritize-yarn/commits?author=akameco "Code") [📖](https://github.com/akameco/prioritize-yarn/commits?author=akameco "Documentation") [🚇](#infra-akameco "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars2.githubusercontent.com/u/47388?v=4" width="100px;"/><br /><sub><b>Miguel Madero</b></sub>](http://www.miguelmadero.com)<br />[💻](https://github.com/akameco/prioritize-yarn/commits?author=MiguelMadero "Code") |
-| :---: | :---: |
-
+<table><tr><td align="center"><a href="http://akameco.github.io"><img src="https://avatars2.githubusercontent.com/u/4002137?v=4" width="100px;" alt="akameco"/><br /><sub><b>akameco</b></sub></a><br /><a href="https://github.com/akameco/prioritize-yarn/commits?author=akameco" title="Code">💻</a> <a href="https://github.com/akameco/prioritize-yarn/commits?author=akameco" title="Documentation">📖</a> <a href="#infra-akameco" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="http://www.miguelmadero.com"><img src="https://avatars2.githubusercontent.com/u/47388?v=4" width="100px;" alt="Miguel Madero"/><br /><sub><b>Miguel Madero</b></sub></a><br /><a href="https://github.com/akameco/prioritize-yarn/commits?author=MiguelMadero" title="Code">💻</a></td></tr></table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

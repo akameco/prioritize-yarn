@@ -10,6 +10,10 @@ function isUninstall(input) {
   return ['uninstall', 'remove', 'rm', 'r', 'un', 'unlink'].includes(input)
 }
 
+function isLink(input) {
+  return ['link', 'ln'].includes(input)
+}
+
 function hasNoFlags(flags) {
   // Meow sets all flags to false unless present, so we need to check all of them
   return !Object.keys(flags).reduce(
@@ -48,6 +52,11 @@ module.exports = (input, flags) => {
     return execa('npm', input, opts)
   }
 
+  if (isLink(inputCmd)) {
+    task = 'yarn'
+    args = ['link'].concat(input.slice(1))
+  }
+
   if (isInstall(inputCmd) || isUninstall(inputCmd)) {
     task = 'yarn'
     const cmd = getCmd(inputCmd)
@@ -62,7 +71,7 @@ module.exports = (input, flags) => {
     } else if (isInstall(inputCmd) && hasNoFlags(flags)) {
       args = []
     } else if (isUninstall(inputCmd)) {
-      args = ['remove', input.slice(1)]
+      args = ['remove'].concat(input.slice(1))
     } else {
       // For npm install --global and more...
       task = 'npm'

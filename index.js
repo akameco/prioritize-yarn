@@ -41,7 +41,7 @@ module.exports = (input, flags) => {
   flags = flags || {}
   const opts = {
     cwd: process.cwd(),
-    stdio: 'inherit'
+    stdio: 'inherit',
   }
 
   let task = 'npm'

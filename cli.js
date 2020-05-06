@@ -10,21 +10,21 @@ const cli = meow({
   flags: {
     save: {
       type: 'boolean',
-      alias: 'S'
+      alias: 'S',
     },
     'save-dev': {
       type: 'boolean',
-      alias: 'D'
+      alias: 'D',
     },
     'save-optional': {
       type: 'boolean',
-      alias: 'O'
+      alias: 'O',
     },
     'save-exact': {
       type: 'boolean',
-      alias: 'E'
-    }
-  }
+      alias: 'E',
+    },
+  },
 })
 
 updateNotifier({ pkg: cli.pkg }).notify()
